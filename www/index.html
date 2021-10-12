@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:url" content="https://keitoabe.github.io/QuizAbe/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="クイズ！あべちゃん">
+  <meta property="og:description" content="あなたはどれだけあべちゃんのことを知っているかな？">
+  <meta property="og:image" content="https://keitoabe.github.io/QuizAbe/IMG/IMG_0038.jpeg">
+  <title>Quiz</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+  body {
+  font-family: Verdana, sans-serif;
+  background-image: url(../IMG/IMG_0038.jpeg);
+  background-position: top center;
+  background-size: 70vh;
+  background-repeat: no-repeat;
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+  height: 85vh;
+  position: relative;
+}
+
+.container {
+  width: 90%;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translateY(-50%) translateX(-50%); 
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+.container img {
+  max-width: 70%;
+  height: auto;
+}
+
+#quiztitle {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  font-size: 1.7rem;
+}
+
+.start {
+  text-decoration: none;
+}
+
+#question {
+  height: 15vh;
+  margin-bottom: 10%;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#choices {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 5%;
+  font-size: 1.5rem;
+}
+
+#choices > li {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1vh;
+  margin-bottom: 2vh;
+  cursor: pointer;
+  text-align: center;
+  background-color: #fff;
+}
+
+#choices > li:hover {
+  background: #f8f8f8;
+}
+
+#choices > li.correct {
+  background: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+  font-weight: bold;
+}
+
+#choices > li.wrong {
+  background: #f8d8da;
+  border-color: #f5c6cb;
+  color: #721c24;
+  font-weight: bold;
+}
+
+#choices > li.Answer {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1vh;
+  margin-bottom: 2vh;
+  cursor: pointer;
+  text-align: center;
+}
+
+#btn, #result > a {
+  background: #00acee;
+  margin-top: 4vh;
+  padding: 1.3vh;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+#btn.disabled {
+  background: #ccc;
+  opacity: 0.7;
+}
+
+#result {
+  position: absolute;
+  width: 85%;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  top: 20vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 4px;
+  text-align: center;
+  transition: 0.4s;
+}
+
+#result.hidden {
+  transform: translateY(-1000px);
+}
+
+.correctNumber {
+  font-size: 2rem;
+}
+
+#result > a {
+  display: block;
+  text-decoration: none;
+}
+
+.come {
+  font-size: 0.9rem;
+}
+</style>
+<body>
+  <section class="container">
+    <h1 id="quiztitle">クイズ！あべちゃん</h1>
+    <p class="quizexp">あなたはどれだけあべちゃんのことを知っているかな？</p>
+    <p class="quizexp">全部で10問です</p>
+    <a href="quiz.html" class="start"><div id="btn">はじめる</div></a>
+
+  </section>
+
+
+</body>
+</html>
